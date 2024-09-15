@@ -1,5 +1,5 @@
-import React from 'react'
-import Stripe from './Stripe'
+import React from "react";
+import Stripe from "./Stripe";
 
 const Stripes = () => {
   var data = [
@@ -30,11 +30,12 @@ const Stripes = () => {
   ];
 
   return (
-    <div className=' flex items-center mt-20'>
-      {data.map((elem,index)=>(<Stripe val={elem} />))}
-      
+    <div className=" flex items-center mt-20">
+      {data.map((elem, index) => (
+        <Stripe val={elem} />
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default Stripes
+export default Stripes;
