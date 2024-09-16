@@ -34,30 +34,32 @@ const App = () => {
   }, []);
 
   return (
-    <div className="w-full bg-black text-white font-sans ">
+    <div className="w-full bg-black text-white font-sans">
       <div
         id="preloader"
-        className={`pointer-events-none fixed top-0 left-0 w-full h-full text-white bg-black z-50 flex items-center justify-center transition-opacity duration-1000 ${
+        className={`pointer-events-none fixed top-0 left-0 w-full h-full bg-black z-50 flex items-center justify-center transition-opacity duration-1000 ${
           isLoaded ? "opacity-0" : "opacity-100"
         }`}
       >
-        <a className="text-[20rem] h-[30vh] text-sm flex items-center justify-center text-center gap-1" href="#">
+        <a
+          className="text-9xl flex items-center justify-center text-center gap-4"
+          href="#"
+        >
           <span
-            style={{ boxShadow: "0 0 5rem #00FF19" }}
-            className="inline-block w-[8vh] h-[8vh] rounded-full mt-20 bg-green-500"
+            style={{ boxShadow: "0 0 4rem #00FF19" }}
+            className="w-16 h-16 rounded-full mt-24 bg-green-500"
           ></span>
-          <span className="inline-block">work</span>
+          <span className="text-[15rem] font-regular">work</span>
         </a>
       </div>
       <div
         id="content"
-        className={` pointer-events-none content opacity-0 transition-opacity duration-1000 ${
+        className={`content opacity-0 transition-opacity duration-1000 ${
           isLoaded ? "opacity-100" : ""
         }`}
         data-scroll-container
-      >
-      </div>
-        <Cursor />   
+      ></div>
+        <Cursor />
         <Navbar />
         <Work />
         <Stripes />
