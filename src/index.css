@@ -4,3 +4,13 @@
 *{
     cursor: none;
 }
+
+::-webkit-scrollbar{
+    width: 5px;
+    background-color: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 20px;
+}
