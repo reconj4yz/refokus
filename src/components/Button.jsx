@@ -1,26 +1,20 @@
-import React from "react";
-import { IoIosReturnRight } from "react-icons/io";
-import { motion } from "framer-motion";
+import React from 'react'
+import { IoMdReturnRight } from "react-icons/io";
 
-const Button = ({ title = 'Get Started' }) => {
+
+function Button({title = "Start a Product"}) {
   return (
-    <motion.div
-      className="max-w-40 min-w-40 px-4 py-2 bg-zinc-100 rounded-full text-black flex items-center justify-between cursor-pointer"
-      whileHover={{ scale: 1.1 }} // Shrink the entire button on hover
-      whileTap={{ scale: 0.95 }} // Shrink the entire button on tap
-      transition={{ duration: 0.15 }} // Smooth transition
-    >
-      <motion.div
-        className="flex w-full justify-between items-center"
-        whileHover={{ y: -7 }} // Move contents up on hover
-        whileTap={{ y: 0 }} // Reset the position on tap
-        transition={{ duration: 0.15 }} // Smooth transition
-      >
-        <span className="text-sm font-regular">{title}</span>
-        <IoIosReturnRight />
-      </motion.div>
-    </motion.div>
-  );
-};
+    <div className='group border link w-44 h-10 px-4 py-2 bg-white rounded-full overflow-hidden flex items-center justify-between gap-1'>
+        <div className='group-hover:-translate-y-[15px] flex flex-col gap-2 transition duration-500 linear translate-y-[17px]'>         
+            <span className='text-black'>{title}</span>
+            <span className='text-black'>{title}</span>         
+        </div>
+        <div className='group-hover:-translate-y-[25px] flex flex-col gap-9 transition duration-1000 linear translate-y-[25px]'>  
+          <IoMdReturnRight className='text-black'/>
+          <IoMdReturnRight className='text-black'/>
+        </div>
+    </div>
+  )
+}
 
-export default Button;
+export default Button
